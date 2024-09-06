@@ -1,0 +1,1 @@
+UPDATE Waermepumpe.Interessenten SET MontageterminAm = {{new Date(Montagetermin_DatePicker.formattedDate).toISOString().replace('T', ' ').replace('Z', '')}}, MontageterminBearbeitetVon = {{appsmith.user.email}} WHERE id = {{angenommen.selectedRow.id}} 
