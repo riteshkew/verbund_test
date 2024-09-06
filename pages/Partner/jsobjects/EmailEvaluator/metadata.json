@@ -1,0 +1,24 @@
+{
+  "gitSyncId": "65b8cca6cdc1db10be34d1a2_65ead698aa221b64c827febd",
+  "id": "Partner_EmailEvaluator",
+  "unpublishedCollection": {
+    "name": "EmailEvaluator",
+    "pageId": "Partner",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "partnerEmail",
+        "value": "null"
+      },
+      {
+        "name": "partners",
+        "value": "{\n  TUERKOTT: \"Tuerkott\",\n  HOCHRIEDER: \"Hochrieder\",\n  BIEDERMANN: \"Biedermann\",\n  GAHLEITNER: \"Gahleitner\",\n  MACH: \"Mach\"\n}"
+      },
+      {
+        "name": "partnerEmails",
+        "value": "{\n  TUERKOTT: \"waermepumpe@tmt-group.at\",\n  HOCHRIEDER: \"j.freitag@hochrieder.at\",\n  BIEDERMANN: \"martin@biedermann.co.at\",\n  GAHLEITNER: \"waermepumpe@gahleitner.com\",\n  MACH: \"office@mach-gmbh.at\"\n}"
+      }
+    ]
+  }
+}

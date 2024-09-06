@@ -1,0 +1,2 @@
+INSERT INTO Waermepumpe.Interessenten({{Object.keys(Transformer.transformedData).join(", ")}}) VALUES ({{Object.values(Transformer.transformedData).map(el => (`'${el}'`)).join(", ")}})
+

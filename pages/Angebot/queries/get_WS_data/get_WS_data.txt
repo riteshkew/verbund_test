@@ -1,0 +1,5 @@
+SELECT p.Produkt, pa.Partner, pr.Preis
+FROM Waermepumpe.Produkte p
+JOIN Waermepumpe.Preise pr ON p.id = pr.Produkt
+JOIN Waermepumpe.Installationspartner pa ON pa.ID = pr.PartnerId 
+WHERE p.produkt = {{ProductEvaluator.waterModel}} AND pa.Partner = {{getPartner.data[0].Partner}} ;

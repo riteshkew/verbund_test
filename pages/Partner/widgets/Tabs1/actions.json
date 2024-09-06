@@ -1,0 +1,84 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 14,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButton1.isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButton1.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton2.isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton1": {
+      "buttonColor": "#15803d",
+      "buttonType": "SIMPLE",
+      "iconName": "send-message",
+      "id": "groupButton1",
+      "index": 0,
+      "isDisabled": "{{appsmith.store.currentCustomer.Anspruch !== \"J\"}}",
+      "isVisible": true,
+      "label": "Email Senden",
+      "menuItems": {},
+      "onClick": "{{EmailEvaluator.evaluateEmail();\nsendToPartner.run().then(() => {\n  updateProspect.run().then(() => {\n\t\tnavigateTo('Home', {}, 'SAME_WINDOW');\n    showAlert('E-Mail gesendet', \"Success\");\n  }).catch(() => {\n    showAlert('Fehler mit Datenbank', \"Error\");\n  });\n  \n}).catch(() => {\n  showAlert('Fehler mit E-Mail Sendung', 'error');\n});}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.bb8db4853027d74a78963c3375841e4b.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "f7q64sbsjw",
+  "leftColumn": 35,
+  "minWidth": 450,
+  "mobileBottomRow": 40,
+  "mobileLeftColumn": 36,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 36,
+  "orientation": "horizontal",
+  "originalBottomRow": 43,
+  "originalTopRow": 36,
+  "parentColumnSpace": 28.796875,
+  "parentId": "y2wkga6fjp",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "topRow": 7,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "0cocf6ydso",
+  "widgetName": "actions"
+}

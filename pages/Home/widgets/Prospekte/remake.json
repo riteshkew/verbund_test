@@ -1,0 +1,109 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 8,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButton1.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton1.isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButton2.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton1.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButtonrnhqegs8uq.onClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonrnhqegs8uq.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton1": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "phone",
+      "id": "groupButton1",
+      "index": 0,
+      "isDisabled": "{{all_data.selectedRow.kontaktiertAm !== null || all_data.selectedRow.id === \"\" }}",
+      "isVisible": true,
+      "label": "Bearbeiten",
+      "menuItems": {},
+      "onClick": "{{storeValue('currentCustomer', all_data.selectedRow).then(() => {\n  navigateTo('Bearbeitung', {}, 'SAME_WINDOW');\n}).catch(() => {\n  showAlert('\"Fehler\"', 'error');\n});}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButtonrnhqegs8uq": {
+      "buttonColor": "#00488e",
+      "buttonType": "SIMPLE",
+      "iconName": "add",
+      "id": "groupButtonrnhqegs8uq",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Neu Kunde",
+      "menuItems": {},
+      "onClick": "{{navigateTo('NewCustomer', {}, 'SAME_WINDOW');}}",
+      "placement": "CENTER",
+      "widgetId": "qn2g57x739"
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.bb8db4853027d74a78963c3375841e4b.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ny4wecpos3",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 118,
+  "mobileLeftColumn": 28,
+  "mobileRightColumn": 52,
+  "mobileTopRow": 114,
+  "orientation": "horizontal",
+  "originalBottomRow": 10,
+  "originalTopRow": 6,
+  "parentColumnSpace": 19.09375,
+  "parentId": "sirbr29l7j",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 16,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "topRow": 4,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "8pzc2qq4bz",
+  "widgetName": "remake"
+}

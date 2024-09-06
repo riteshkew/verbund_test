@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "bottomRow": 64,
+  "bottomRowBeforeCollapse": 85,
+  "capSide": 0,
+  "capType": "nc",
+  "displayName": "Divider",
+  "dividerColor": "#858282",
+  "dynamicBindingPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.3b7d47d7bd70da418a827287042cbb7f.svg",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": "{{appsmith.store.currentCustomer.Kommentar !== undefined}}",
+  "key": "siztykr19t",
+  "leftColumn": 21,
+  "minWidth": 450,
+  "mobileBottomRow": 55,
+  "mobileLeftColumn": 20,
+  "mobileRightColumn": 40,
+  "mobileTopRow": 51,
+  "orientation": "horizontal",
+  "originalBottomRow": 64,
+  "originalTopRow": 60,
+  "parentColumnSpace": 9.244140625,
+  "parentId": "veldbmro94",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 41,
+  "searchTags": [
+    "line"
+  ],
+  "strokeStyle": "solid",
+  "tags": [
+    "Layout"
+  ],
+  "thickness": 2,
+  "topRow": 60,
+  "topRowBeforeCollapse": 81,
+  "type": "DIVIDER_WIDGET",
+  "version": 1,
+  "widgetId": "ps43oj4r0x",
+  "widgetName": "Divider1"
+}

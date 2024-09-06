@@ -1,0 +1,1 @@
+UPDATE Waermepumpe.Interessenten SET Rueckmeldung = 'N' WHERE id = {{for_partners.selectedRow.id}} 

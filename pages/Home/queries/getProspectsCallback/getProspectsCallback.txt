@@ -1,0 +1,1 @@
+SELECT * FROM Waermepumpe.Interessenten WHERE kontaktiertAm IS NULL AND EntscheidungGesendetAm IS NULL AND anPartnerGesendetAm is NULL AND loeschen is NULL AND (KundeNichtErreichtAm is NOT NULL OR RueckrufAngefordert = 'J');

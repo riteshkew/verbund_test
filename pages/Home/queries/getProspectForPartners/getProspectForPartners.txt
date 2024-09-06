@@ -1,0 +1,1 @@
+SELECT * FROM Waermepumpe.Interessenten WHERE Anspruch = 'J' AND EntscheidungGesendetAm IS NOT NULL AND anPartnerGesendetAm is NULL AND loeschen is NULL;

@@ -1,0 +1,2 @@
+
+UPDATE Waermepumpe.Interessenten SET Partner  = {{getPartner.data[0].Partner}} WHERE id = {{all_data.selectedRow.id}}

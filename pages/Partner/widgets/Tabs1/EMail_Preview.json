@@ -1,0 +1,54 @@
+{
+  "animateLoading": true,
+  "borderOpacity": 100,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": 1,
+  "bottomRow": 77,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "displayName": "Iframe",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "srcDoc"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.a84667dbdc548d14f7c83df551151550.svg",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "mkgukwwfxc",
+  "leftColumn": 0,
+  "mobileBottomRow": 33,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 24,
+  "mobileTopRow": 1,
+  "originalBottomRow": 77,
+  "originalTopRow": 7,
+  "parentColumnSpace": 20.00732421875,
+  "parentId": "y2wkga6fjp",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 33,
+  "searchTags": [
+    "embed"
+  ],
+  "source": "",
+  "srcDoc": "<!DOCTYPE html>\n<html>\n\n<head>\n    <title>Newsletter</title>\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n            font-size: 14px;\n            background-color: #f4f4f4;\n            padding: 20px;\n        }\n\n        .container {\n            max-width: 600px;\n            margin: 0 auto;\n            background-color: #fff;\n            padding: 20px;\n            border-radius: 5px;\n        }\n\n        h1 {\n            color: #333;\n        }\n\n        h2 {\n            color: #00488e;\n            font-size: 16px;\n        }\n\n        p {\n            color: #555;\n        }\n\n        .cta {\n            text-align: center;\n            margin-top: 20px;\n        }\n\n        .cta a {\n            display: inline-block;\n            padding: 10px 20px;\n            background-color: #f44336;\n            color: #fff;\n            text-decoration: none;\n            border-radius: 5px;\n        }\n    </style>\n</head>\n\n<body>\n    <div class=\"container\">\n        <p>\n            Sehr geehrte Firma {{getPartner.data[0].Partner}},<br />\n            <br />\n            es freut uns, Ihnen die vorab ermittelten Daten des:der Kund:in für ein VERBUND Wärmepumpenprojekt in der\n            folgenden E-Mail zu übermitteln.<br />\n        </p>\n\n        <h2>Kontakdaten:</h2>\n\n        <table>\n            <tr>\n                <td> <strong>{{appsmith.store.currentCustomer.Vorname}} {{appsmith.store.currentCustomer.Nachname}}</strong></td>\n            </tr>\n            <tr>\n                <td> <strong>{{appsmith.store.currentCustomer.Strasse}} {{appsmith.store.currentCustomer.Hausnummer}}</strong></td>\n            </tr>\n            <tr>\n                <td> <strong>{{appsmith.store.currentCustomer.PLZ}} {{appsmith.store.currentCustomer.Ort}}</strong></td>\n            </tr>\n            <tr>\n                <td> <strong>{{appsmith.store.currentCustomer.Telefonnummer}}</strong></td>\n            </tr>\n            <tr>\n                <td> <strong>{{appsmith.store.currentCustomer.Email}}</strong></td>\n            </tr>\n\n        </table>\n\n        <hr>\n\n        <h2>Daten zum Haushalt:</h2>\n\n        <table>\n            <tr>\n                <td>Objektart:</td>\n                <td><strong>{{appsmith.store.currentCustomer.Immobilienart}}</strong></td>\n            </tr>\n            <tr>\n                <td>Baujahr des Hauses:</td>\n                <td><strong>{{appsmith.store.currentCustomer.Baujahr}}</strong></td>\n            </tr>\n            <tr>\n                <td>Letzte Sanierung:</td>\n                <td><strong>{{appsmith.store.currentCustomer.SanierungJahr}}</strong></td>\n            </tr>\n            <tr>\n                <td>Personen im Haushalt:</td>\n                <td><strong>{{appsmith.store.currentCustomer.Personen}}</strong></td>\n            </tr>\n            <tr>\n                <td>Energieausweis:</td>\n                <td><strong>{{appsmith.store.currentCustomer.EnergieausweisVorhanden}}</strong></td>\n            </tr>\n\n        </table>\n\n        <hr>\n\n        <h2>Daten zum aktuellen Heizsystem:</h2>\n\n        <table>\n            <tr>\n                <td>Heizungsart:</td>\n                <td><strong>{{appsmith.store.currentCustomer.Heizungsart}}</strong></td>\n            </tr>\n            <tr>\n                <td>Wärmeverteilung:</td>\n                <td><strong>{{appsmith.store.currentCustomer.Heizanlage}}</strong></td>\n            </tr>\n            <tr>\n                <td>Jahres Heizenergiemenge (kWh):</td>\n                <td><strong>{{appsmith.store.currentCustomer.DurchschnittsenergieKWh}}</strong></td>\n            </tr>\n            <tr>\n                <td>Beheizte Fläche (m²):</td>\n                <td><strong>{{appsmith.store.currentCustomer.BeheizteFlaeche}}</strong></td>\n            </tr>\n            <tr>\n                <td>Anzahl der Heizkreise:</td>\n                <td><strong>{{appsmith.store.currentCustomer.Heizkreise}}</strong></td>\n            </tr>\n            <tr>\n                <td>Elektrikerarbeiten via Installationspartner:</td>\n                <td><strong>{{appsmith.store.currentCustomer.Elektrikerarbeiten !== null ? appsmith.store.currentCustomer.Elektrikerarbeiten : \"-\"}}</strong></td>\n            </tr>\n            <tr>\n                <td>Aktuelle Vorlauftemperatur (°C):</td>\n                <td><strong>{{appsmith.store.currentCustomer.Vorlauftemperatur}}</strong></td>\n            </tr>\n            <tr>\n                <td>Heizlast (kWh/m²):</td>\n                <td><strong>{{appsmith.store.currentCustomer.HeizlastwertKWhM2}}</strong></td>\n            </tr>\n        </table>\n\n        <hr>\n\n        <h2>Daten zur aktuellen Warmwasserbereitung:</h2>\n\n        <p><strong>Bestand: </strong></p>\n\n        <table>\n            <tr>\n                <td>Derzeitige Warmwasserbereitung: </td>\n                <td><strong>{{appsmith.store.currentCustomer.Warmwasserbereitung}}</strong> </td>\n            </tr>\n            <tr>\n                <td>Fassungsvermögen des Speichers (l): </td>\n                <td><strong>{{(appsmith.store.currentCustomer.WarmwsserspeicherKapazitaet !== null && appsmith.store.currentCustomer.WarmwsserspeicherKapazitaet !== undefined) ? appsmith.store.currentCustomer.WarmwsserspeicherKapazitaet : \"-\"}}</strong></td>\n            </tr>\n            <tr>\n                <td>Solarthermieanlage vorhanden: </td>\n                <td><strong>{{(appsmith.store.currentCustomer.Solarthermieanlage !== null && appsmith.store.currentCustomer.Solarthermieanlage !== undefined) ? appsmith.store.currentCustomer.Solarthermieanlage : \"-\"}}</strong></td>\n            </tr>\n        </table>\n\n        <p><strong>Neu-Installation:</strong> </p>\n\n        <table>\n            <tr>\n                <td>Integrierter Warmwasserspeicher in Wärmepumpe gewünscht (190l): </td>\n                <td><strong>{{(appsmith.store.currentCustomer.WarmwasserspeicherMitWaermepumpeIntegriert !== null && appsmith.store.currentCustomer.WarmwasserspeicherMitWaermepumpeIntegriert !== null) ? appsmith.store.currentCustomer.WarmwasserspeicherMitWaermepumpeIntegriert : \"-\"}}</strong></td>\n            </tr>\n            <tr>\n                <td>Wunschgröße separater Warmwasserspeicher (l):</td>\n                <td><strong>{{appsmith.store.currentCustomer.WarmwasserspeicherWuenschgroesse !== null ? appsmith.store.currentCustomer.WarmwasserspeicherWuenschgroesse : \"-\"}}</strong></td>\n            </tr>\n        </table>\n\n        <hr>\n\n        <h2>VERBUND Vorschlag zur Auslegung der Wärmepumpe:</h2>\n\n        <table>\n            <tr>\n                <td>Wärmepumpenmodell:</td>\n                <td><strong>{{get_WP_data.data[0].Produkt}}</strong></td>\n            </tr>\n        </table>\n\n        <hr>\n\n        <h2>VERBUND Vorschlag zur Auslegung der Warmwasserbereitung:</h2>\n\n        <table>\n            <tr>\n                <td>Warmwasserspeicher:</td>\n                <td><strong>{{get_WS_data.data.length !== 0 ? get_WS_data.data[0].Produkt : \"-\"}}</strong></td>\n            </tr>\n        </table>\n\n        <hr>\n\n        <h2>Erste Preisindikation an den:die Kund:in (Brutto in Euro):</h2>\n        <table>\n            <tr>\n                <td>Wärmepumpe:</td>\n                <td><strong>{{get_WP_data.data[0].Preis.toLocaleString(\"DE\")}}</strong></td>\n            </tr>\n            <tr>\n                <td>Warmwasserbereitung:</td>\n                <td><strong>{{get_WS_data.data.length !== 0 ? get_WS_data.data[0].Preis.toLocaleString(\"DE\"): \"-\"}}</strong></td>\n            </tr>\n        </table>\n\n        <br>\n\n\n        <p>\n            Freundliche Grüße,<br>\n            Ihr VERBUND-Team\n        </p>\n\n\n        <div style=\"background-color:#f6f6f6; padding: 20px; margin-top: 20px;\">\n            <p><strong>VERBUND AG </strong></p>\n            <p>Sitz: Am Hof 6a, 1010 Wien, Firmenbuch: 76023 z, HG Wien</p>\n        </div>\n    </div>\n</body>\n\n</html>",
+  "tags": [
+    "Display"
+  ],
+  "topRow": 7,
+  "type": "IFRAME_WIDGET",
+  "version": 1,
+  "widgetId": "hi7xhlebc0",
+  "widgetName": "EMail_Preview"
+}
