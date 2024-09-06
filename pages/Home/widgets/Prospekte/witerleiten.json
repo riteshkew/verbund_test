@@ -1,0 +1,85 @@
+{
+  "animateLoading": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 10,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButton1.buttonColor"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton1": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "heart",
+      "id": "groupButton1",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "An Partner weiterleiten",
+      "menuItems": {},
+      "onClick": "{{storeValue('currentCustomer', for_partners.selectedRow).then(() => {\n  navigateTo('Partner', {}, 'SAME_WINDOW');\n}).catch(() => {\n  showAlert('Fehler, kontaktieren Sie den Administrator', 'error');\n});}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.bb8db4853027d74a78963c3375841e4b.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isDisabled": "{{\nfor_partners.selectedRow.Rueckmeldung === undefined ||\nfor_partners.selectedRow.Rueckmeldung === null ||\nfor_partners.selectedRow.id === \"\" || getProspectForPartners.data.length === 0 || for_partners.selectedRow.Rueckmeldung === \"N\"}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "bc0c9nboqq",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 8,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 4,
+  "mobileTopRow": 4,
+  "orientation": "horizontal",
+  "originalBottomRow": 9,
+  "originalTopRow": 5,
+  "parentColumnSpace": 28.796875,
+  "parentId": "ag5kiz7y7y",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 16,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "topRow": 6,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "viqze2q3l5",
+  "widgetName": "witerleiten"
+}

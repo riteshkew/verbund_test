@@ -1,0 +1,6 @@
+select PPM.PLZ, IP.Partner, produkte.Produkt, preise.Preis from Waermepumpe.Installationspartner IP 
+    JOIN Waermepumpe.PartnerPLZMapping PPM ON IP.ID = PPM.PartnerId
+    JOIN Waermepumpe.Preise preise ON IP.ID = preise.PartnerId
+    JOIN Waermepumpe.Produkte produkte ON preise.Produkt = produkte.id
+WHERE PPM.PLZ = {{ bearbeitung.selectedRow.PLZ }}
+AND produkte.Produkt in ('HPA Speicher 300l', 'Vitocal 252-A 1C, 10kW')

@@ -1,0 +1,1 @@
+SELECT Partner, Email from Waermepumpe.Installationspartner IP JOIN Waermepumpe.PartnerPLZMapping PPM ON IP.ID = PPM.PartnerId WHERE PLZ = {{appsmith.store.currentCustomer.PLZ}}

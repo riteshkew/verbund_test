@@ -1,0 +1,3 @@
+UPDATE Waermepumpe.Interessenten
+SET {{SQLHelper.buildUpdateQuery()}}
+WHERE id = {{appsmith.store.currentCustomer.id}};

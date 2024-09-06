@@ -1,0 +1,106 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 10,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonpqt1ts2sia.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton1": {
+      "buttonColor": "#15803d",
+      "buttonType": "SIMPLE",
+      "iconName": "drawer-left-filled",
+      "id": "groupButton1",
+      "index": 0,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "zugestimmt",
+      "menuItems": {},
+      "onClick": "{{updateRueckmeldungJa.run().then(() => {\n  getProspectForPartners.run();\n  showAlert('Daten erfolgreich aktualisiert.', 'success');\n}).catch(() => {\n  showAlert('Fehler mit Datenbank Anfrage', '');\n});}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton2": {
+      "buttonColor": "#b91c1c",
+      "buttonType": "SIMPLE",
+      "iconName": "cross",
+      "id": "groupButton2",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "nicht zugestimmt",
+      "menuItems": {},
+      "onClick": "{{updateRueckmeldungNein.run().then(() => {\n  getProspectForPartners.run();\n  showAlert('\"Daten Erfolgreich aktualisiert\"', 'success');\n}).catch(() => {\n  showAlert('Fehler mit Datenbank anfrage', 'error');\n});}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButtonpqt1ts2sia": {
+      "buttonColor": "#eab308",
+      "buttonType": "SIMPLE",
+      "iconName": "reset",
+      "id": "groupButtonpqt1ts2sia",
+      "index": 2,
+      "isDisabled": false,
+      "isVisible": true,
+      "label": "Reset zustimmung",
+      "menuItems": {},
+      "onClick": "{{updateRueckmeldungReset.run().then(() => {\n  getProspectForPartners.run();\n  showAlert('Daten Erfolgreich Akualisiert', 'success');\n}).catch(() => {\n  showAlert('Fehler', 'error');\n});}}",
+      "placement": "CENTER",
+      "widgetId": "q3syhvho46"
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.bb8db4853027d74a78963c3375841e4b.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "s2zaidzjz1",
+  "leftColumn": 35,
+  "minWidth": 450,
+  "mobileBottomRow": 12,
+  "mobileLeftColumn": 40,
+  "mobileRightColumn": 64,
+  "mobileTopRow": 8,
+  "orientation": "horizontal",
+  "parentColumnSpace": 28.796875,
+  "parentId": "ag5kiz7y7y",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "topRow": 6,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "ssxm158ihk",
+  "widgetName": "ButtonGroup2"
+}

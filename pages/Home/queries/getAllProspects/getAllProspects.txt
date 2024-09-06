@@ -1,0 +1,1 @@
+SELECT * FROM Waermepumpe.Interessenten WHERE loeschen is NULL ORDER BY beantragtAm;

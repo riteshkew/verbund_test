@@ -1,0 +1,2 @@
+INSERT INTO Waermepumpe.Interessenten {{SQLHelper.buildInsertQuery()}}
+

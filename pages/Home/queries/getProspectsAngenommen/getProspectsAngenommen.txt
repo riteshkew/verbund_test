@@ -1,0 +1,1 @@
+SELECT * FROM Waermepumpe.Interessenten WHERE AngebotAngenommenAm IS NOT NULL AND AbgeschlossenAm is NULL AND loeschen is NULL;

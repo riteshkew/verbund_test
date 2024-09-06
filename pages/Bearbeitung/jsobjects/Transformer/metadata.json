@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "65b8cca6cdc1db10be34d1a2_65d4be1dae61d15799413108",
+  "id": "Bearbeitung_Transformer",
+  "unpublishedCollection": {
+    "name": "Transformer",
+    "pageId": "Bearbeitung",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "processedData",
+        "value": "null"
+      },
+      {
+        "name": "transformedData",
+        "value": "null"
+      }
+    ]
+  }
+}

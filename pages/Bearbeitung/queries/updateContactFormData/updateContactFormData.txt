@@ -1,0 +1,1 @@
+UPDATE FormularDaten SET Authentifizierung_Art = 'J' where FormularId in ('waermepumpe_kontakt', 'vormerken-waermepumpe_kontakt') AND  id = {{appsmith.store.currentCustomer.Id}}

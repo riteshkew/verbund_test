@@ -1,0 +1,6 @@
+select Id, FormularId, PersoenlicheDaten_Anrede Anrede, PersoenlicheDaten_Vorname Vorname, PersoenlicheDaten_Nachname Nachname, 
+  PersoenlicheDaten_Email Email, PersoenlicheDaten_TelefonNummer Telefonnummer, Rechnungsadresse_Strasse Strasse, 
+  Rechnungsadresse_Hausnummer Hausnummer, Rechnungsadresse_Plz Postleitzahl, 
+  Rechnungsadresse_Ort Ort, Stromschule_Terminvorschlaege Terminvorschlag, Anmerkungen,Neukunde_Agb Newsletter, Erstellt
+  from FormularDaten where FormularId = 'waermepumpe_kontakt'
+select * from formulardaten

@@ -1,0 +1,3 @@
+UPDATE Waermepumpe.Interessenten 
+SET anPartnerGesendetAm = {{new Date().toISOString().replace('T', ' ').replace('Z', '')}}, anPartnerGesendetVon = {{appsmith.user.email}}
+WHERE id = {{appsmith.store.currentCustomer.id}};

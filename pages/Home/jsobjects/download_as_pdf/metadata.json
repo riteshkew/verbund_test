@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "65b8cca6cdc1db10be34d1a2_65bb74766119bb3cbb63d486",
+  "id": "Home_download_as_pdf",
+  "unpublishedCollection": {
+    "name": "download_as_pdf",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

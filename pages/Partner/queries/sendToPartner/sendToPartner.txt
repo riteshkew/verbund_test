@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Newsletter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #00488e;
+            font-size: 16px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cta a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>
+            Sehr geehrte Firma {{getPartner.data[0].Partner}},<br />
+            <br />
+            es freut uns, Ihnen die vorab ermittelten Daten des:der Kund:in für ein VERBUND Wärmepumpenprojekt in der
+            folgenden E-Mail zu übermitteln.<br />
+        </p>
+
+        <h2>Kontakdaten:</h2>
+
+        <table>
+            <tr>
+                <td> <strong>{{appsmith.store.currentCustomer.Vorname}} {{appsmith.store.currentCustomer.Nachname}}</strong></td>
+            </tr>
+            <tr>
+                <td> <strong>{{appsmith.store.currentCustomer.Strasse}} {{appsmith.store.currentCustomer.Hausnummer}}</strong></td>
+            </tr>
+            <tr>
+                <td> <strong>{{appsmith.store.currentCustomer.PLZ}} {{appsmith.store.currentCustomer.Ort}}</strong></td>
+            </tr>
+            <tr>
+                <td> <strong>{{appsmith.store.currentCustomer.Telefonnummer}}</strong></td>
+            </tr>
+            <tr>
+                <td> <strong>{{appsmith.store.currentCustomer.Email}}</strong></td>
+            </tr>
+
+        </table>
+
+        <hr>
+
+        <h2>Daten zum Haushalt:</h2>
+
+        <table>
+            <tr>
+                <td>Objektart:</td>
+                <td><strong>{{appsmith.store.currentCustomer.Immobilienart}}</strong></td>
+            </tr>
+            <tr>
+                <td>Baujahr des Hauses:</td>
+                <td><strong>{{appsmith.store.currentCustomer.Baujahr}}</strong></td>
+            </tr>
+            <tr>
+                <td>Letzte Sanierung:</td>
+                <td><strong>{{appsmith.store.currentCustomer.SanierungJahr}}</strong></td>
+            </tr>
+            <tr>
+                <td>Personen im Haushalt:</td>
+                <td><strong>{{appsmith.store.currentCustomer.Personen}}</strong></td>
+            </tr>
+            <tr>
+                <td>Energieausweis:</td>
+                <td><strong>{{appsmith.store.currentCustomer.EnergieausweisVorhanden}}</strong></td>
+            </tr>
+
+        </table>
+
+        <hr>
+
+        <h2>Daten zum aktuellen Heizsystem:</h2>
+
+        <table>
+            <tr>
+                <td>Heizungsart:</td>
+                <td><strong>{{appsmith.store.currentCustomer.Heizungsart}}</strong></td>
+            </tr>
+            <tr>
+                <td>Wärmeverteilung:</td>
+                <td><strong>{{appsmith.store.currentCustomer.Heizanlage}}</strong></td>
+            </tr>
+            <tr>
+                <td>Jahres Heizenergiemenge (kWh):</td>
+                <td><strong>{{appsmith.store.currentCustomer.DurchschnittsenergieKWh}}</strong></td>
+            </tr>
+            <tr>
+                <td>Beheizte Fläche (m²):</td>
+                <td><strong>{{appsmith.store.currentCustomer.BeheizteFlaeche}}</strong></td>
+            </tr>
+            <tr>
+                <td>Anzahl der Heizkreise:</td>
+                <td><strong>{{appsmith.store.currentCustomer.Heizkreise}}</strong></td>
+            </tr>
+            <tr>
+                <td>Elektrikerarbeiten via Installationspartner:</td>
+                <td><strong>{{appsmith.store.currentCustomer.Elektrikerarbeiten !== null ? appsmith.store.currentCustomer.Elektrikerarbeiten : "-"}}</strong></td>
+            </tr>
+            <tr>
+                <td>Aktuelle Vorlauftemperatur (°C):</td>
+                <td><strong>{{appsmith.store.currentCustomer.Vorlauftemperatur}}</strong></td>
+            </tr>
+            <tr>
+                <td>Heizlast (kWh/m²):</td>
+                <td><strong>{{appsmith.store.currentCustomer.HeizlastwertKWhM2}}</strong></td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>Daten zur aktuellen Warmwasserbereitung:</h2>
+
+        <p><strong>Bestand: </strong></p>
+
+        <table>
+            <tr>
+                <td>Derzeitige Warmwasserbereitung: </td>
+                <td><strong>{{appsmith.store.currentCustomer.Warmwasserbereitung}}</strong> </td>
+            </tr>
+            <tr>
+                <td>Fassungsvermögen des Speichers (l): </td>
+                <td><strong>{{(appsmith.store.currentCustomer.WarmwsserspeicherKapazitaet !== null && appsmith.store.currentCustomer.WarmwsserspeicherKapazitaet !== undefined) ? appsmith.store.currentCustomer.WarmwsserspeicherKapazitaet : "-"}}</strong></td>
+            </tr>
+            <tr>
+                <td>Solarthermieanlage vorhanden: </td>
+                <td><strong>{{(appsmith.store.currentCustomer.Solarthermieanlage !== null && appsmith.store.currentCustomer.Solarthermieanlage !== undefined) ? appsmith.store.currentCustomer.Solarthermieanlage : "-"}}</strong></td>
+            </tr>
+        </table>
+
+        <p><strong>Neu-Installation:</strong> </p>
+
+        <table>
+            <tr>
+                <td>Integrierter Warmwasserspeicher in Wärmepumpe gewünscht (190l): </td>
+                <td><strong>{{(appsmith.store.currentCustomer.WarmwasserspeicherMitWaermepumpeIntegriert !== null && appsmith.store.currentCustomer.WarmwasserspeicherMitWaermepumpeIntegriert !== null) ? appsmith.store.currentCustomer.WarmwasserspeicherMitWaermepumpeIntegriert : "-"}}</strong></td>
+            </tr>
+            <tr>
+                <td>Wunschgröße separater Warmwasserspeicher (l):</td>
+                <td><strong>{{appsmith.store.currentCustomer.WarmwasserspeicherWuenschgroesse !== null ? appsmith.store.currentCustomer.WarmwasserspeicherWuenschgroesse : "-"}}</strong></td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>VERBUND Vorschlag zur Auslegung der Wärmepumpe:</h2>
+
+        <table>
+            <tr>
+                <td>Wärmepumpenmodell:</td>
+                <td><strong>{{get_WP_data.data[0].Produkt}}</strong></td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>VERBUND Vorschlag zur Auslegung der Warmwasserbereitung:</h2>
+
+        <table>
+            <tr>
+                <td>Warmwasserspeicher:</td>
+                <td><strong>{{get_WS_data.data.length !== 0 ? get_WS_data.data[0].Produkt : "-"}}</strong></td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <h2>Erste Preisindikation an den:die Kund:in (Brutto in Euro):</h2>
+        <table>
+            <tr>
+                <td>Wärmepumpe:</td>
+                <td><strong>{{get_WP_data.data[0].Preis.toLocaleString("DE")}}</strong></td>
+            </tr>
+            <tr>
+                <td>Warmwasserbereitung:</td>
+                <td><strong>{{get_WS_data.data.length !== 0 ? get_WS_data.data[0].Preis.toLocaleString("DE"): "-"}}</strong></td>
+            </tr>
+        </table>
+
+        <br>
+
+
+        <p>
+            Freundliche Grüße,<br>
+            Ihr VERBUND-Team
+        </p>
+
+
+        <div style="background-color:#f6f6f6; padding: 20px; margin-top: 20px;">
+            <p><strong>VERBUND AG </strong></p>
+            <p>Sitz: Am Hof 6a, 1010 Wien, Firmenbuch: 76023 z, HG Wien</p>
+        </div>
+    </div>
+</body>
+
+</html>

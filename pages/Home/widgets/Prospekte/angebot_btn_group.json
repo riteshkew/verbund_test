@@ -1,0 +1,89 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 10,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButtonrnhqegs8uq.isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButton2.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton1.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButtonrnhqegs8uq.isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButtonrnhqegs8uq.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButtonrnhqegs8uq": {
+      "buttonColor": "#15803d",
+      "buttonType": "SIMPLE",
+      "iconName": "tick-circle",
+      "id": "groupButtonrnhqegs8uq",
+      "index": 0,
+      "isDisabled": "{{all_data.selectedRow.Anspruch !== 'J' || all_data.selectedRow.Rueckmeldung !== 'J' || all_data.selectedRow.anPartnerGesendetAm === null}}",
+      "isVisible": true,
+      "itemType": "BUTTON",
+      "label": "Angebot Angenommen",
+      "menuItems": {},
+      "onClick": "{{showModal(Kunde_Angenommen.name);}}",
+      "placement": "CENTER",
+      "widgetId": "qn2g57x739"
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.bb8db4853027d74a78963c3375841e4b.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "ny4wecpos3",
+  "leftColumn": 17,
+  "minWidth": 450,
+  "mobileBottomRow": 118,
+  "mobileLeftColumn": 28,
+  "mobileRightColumn": 52,
+  "mobileTopRow": 114,
+  "orientation": "horizontal",
+  "originalBottomRow": 8,
+  "originalTopRow": 4,
+  "parentColumnSpace": 19.09375,
+  "parentId": "sirbr29l7j",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 30,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "topRow": 6,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "ykn5aszdh3",
+  "widgetName": "angebot_btn_group"
+}

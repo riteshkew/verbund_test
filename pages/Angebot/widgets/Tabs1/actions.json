@@ -1,0 +1,130 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 38,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "groupButtons.groupButton1.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton2.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButtonp27jfhjsok.isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButton1.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton2.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButtonp27jfhjsok.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButtonp27jfhjsok.isVisible"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton1.onClick"
+    },
+    {
+      "key": "groupButtons.groupButtonp27jfhjsok.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton1": {
+      "buttonColor": "#15803d",
+      "buttonType": "SIMPLE",
+      "iconName": "heart",
+      "id": "groupButton1",
+      "index": 0,
+      "isDisabled": "{{appsmith.store.currentCustomer.Anspruch !== \"J\"}}",
+      "isVisible": true,
+      "label": "Angebot Senden",
+      "menuItems": {},
+      "onClick": "{{HTML_Evaluator.sendAngebot();}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton2": {
+      "buttonColor": "#a16207",
+      "buttonType": "SIMPLE",
+      "iconName": "delete",
+      "id": "groupButton2",
+      "index": 1,
+      "isDisabled": "{{getPartner.data.length !== 0}}",
+      "isVisible": true,
+      "label": "Partner nicht verfügbar Senden",
+      "menuItems": {},
+      "onClick": "{{KeinenPartnerEmail.run().then(() => {\n  showAlert('E-Mail gesendet', 'success');\n  updateProspect.run().then(() => {\n    navigateTo('Home', {}, 'SAME_WINDOW');\n  }).catch(() => {\n    showAlert('Fehler mit Datenbank', \"Error\");\n  });\n}).catch(() => {\n  showAlert('Fehler mit E-Mail Sendung', 'error');\n});}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButtonp27jfhjsok": {
+      "buttonColor": "#b91c1c",
+      "buttonType": "SIMPLE",
+      "iconName": "cross",
+      "id": "groupButtonp27jfhjsok",
+      "index": 2,
+      "isDisabled": "{{appsmith.store.currentCustomer.Anspruch !== \"N\"}}",
+      "isVisible": "true",
+      "label": "Ablehnung Senden",
+      "menuItems": {},
+      "onClick": "{{Ablehnung.run().then(() => {\n  showAlert('E-Mail gesendet', 'success');\n  updateProspect.run().then(() => {\n    navigateTo('Home', {}, 'SAME_WINDOW');\n  }).catch(() => {\n    showAlert('Fehler mit Datenbank', \"Error\");\n  });\n}).catch(() => {\n  showAlert('Fehler mit E-Mail Sendung', 'error');\n});}}",
+      "placement": "CENTER",
+      "widgetId": "w5bitt6dhw"
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.bb8db4853027d74a78963c3375841e4b.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "f7q64sbsjw",
+  "leftColumn": 34,
+  "minWidth": 450,
+  "mobileBottomRow": 40,
+  "mobileLeftColumn": 36,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 36,
+  "orientation": "horizontal",
+  "originalBottomRow": 38,
+  "originalTopRow": 31,
+  "parentColumnSpace": 28.796875,
+  "parentId": "y2wkga6fjp",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "topRow": 31,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "0cocf6ydso",
+  "widgetName": "actions"
+}

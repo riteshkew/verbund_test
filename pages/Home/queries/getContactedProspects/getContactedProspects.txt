@@ -1,0 +1,1 @@
+SELECT * FROM Waermepumpe.Interessenten WHERE kontaktiertAm IS NOT NULL AND EntscheidungGesendetAm IS NULL AND loeschen is NULL ORDER BY kontaktiertAm DESC

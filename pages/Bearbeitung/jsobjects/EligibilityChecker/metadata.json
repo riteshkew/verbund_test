@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "65b8cca6cdc1db10be34d1a2_65b8dc83cdc1db10be34d23b",
+  "id": "Bearbeitung_EligibilityChecker",
+  "unpublishedCollection": {
+    "name": "EligibilityChecker",
+    "pageId": "Bearbeitung",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "rejectionReasons",
+        "value": "[]"
+      }
+    ]
+  }
+}

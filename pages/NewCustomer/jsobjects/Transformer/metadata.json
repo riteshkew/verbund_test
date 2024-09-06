@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "65b8cca6cdc1db10be34d1a2_65d8b84bae61d1579941789a",
+  "id": "NewCustomer_Transformer",
+  "unpublishedCollection": {
+    "name": "Transformer",
+    "pageId": "NewCustomer",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "transformedData",
+        "value": "null"
+      }
+    ]
+  }
+}

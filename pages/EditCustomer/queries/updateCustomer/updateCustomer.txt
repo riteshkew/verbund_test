@@ -1,0 +1,3 @@
+UPDATE Waermepumpe.Interessenten
+SET {{Select1.selectedOptionValue}} = '{{Form.formData[Select1.selectedOptionValue]}}'
+WHERE id = {{appsmith.store.currentCustomer.id}}

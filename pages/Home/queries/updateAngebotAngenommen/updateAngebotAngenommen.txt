@@ -1,0 +1,2 @@
+-- AngebotAngenommenAm
+UPDATE Waermepumpe.Interessenten SET AngebotAngenommenAm = {{new Date().toISOString().replace('T', ' ').replace('Z', '')}}, AngebotAngenommenBearbeitetVon = {{appsmith.user.email}} WHERE id = {{all_data.selectedRow.id}}

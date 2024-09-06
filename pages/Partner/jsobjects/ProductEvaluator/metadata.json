@@ -1,0 +1,24 @@
+{
+  "gitSyncId": "65b8cca6cdc1db10be34d1a2_65e09623ae61d157994180f1",
+  "id": "Partner_ProductEvaluator",
+  "unpublishedCollection": {
+    "name": "ProductEvaluator",
+    "pageId": "Partner",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "model",
+        "value": "null"
+      },
+      {
+        "name": "waterModel",
+        "value": "null"
+      },
+      {
+        "name": "partner",
+        "value": "null"
+      }
+    ]
+  }
+}

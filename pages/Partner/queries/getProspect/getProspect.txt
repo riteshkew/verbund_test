@@ -1,0 +1,1 @@
+SELECT * FROM Waermepumpe.Interessenten WHERE Email = {{appsmith.store.angebotCustomer.Email}} AND EntscheidungGesendetAm is NULL ORDER BY kontaktiertAm DESC

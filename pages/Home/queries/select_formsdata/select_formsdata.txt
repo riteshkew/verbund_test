@@ -1,0 +1,6 @@
+select Id, FormularId formular_id, PersoenlicheDaten_Anrede Anrede, PersoenlicheDaten_Vorname Vorname, PersoenlicheDaten_Nachname Nachname, 
+  PersoenlicheDaten_Email Email, PersoenlicheDaten_TelefonNummer Telefonnummer, Rechnungsadresse_Strasse Strasse, 
+  Rechnungsadresse_Hausnummer Hausnummer, Rechnungsadresse_Plz Postleitzahl, 
+  Rechnungsadresse_Ort Ort, Stromschule_Terminvorschlaege Terminvorschlag, Anmerkungen,Neukunde_Agb Newsletter, Erstellt
+  from FormularDaten where FormularId in ('waermepumpe_kontakt', 'vormerken-waermepumpe_kontakt') AND 
+	PersoenlicheDaten_Email not in ('christian.schreiber@verbund.com', 'stefanie.malaschofsky@verbund.com') and  Authentifizierung_Art is NULL ORDER BY Erstellt DESC
